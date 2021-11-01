@@ -18,12 +18,18 @@
 
 // Challenge 1: Refactor the following code using .forEach()
 
-const numbers = [1, 2, 3, 4];
-let total = 0;
-for (let i = 0; i < numbers.length; i++) {
-  total += numbers[i];
-}
-console.log("total", total); // 10
+// const numbers = [1, 2, 3, 4];
+// let total = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//   total += numbers[i];
+// }
+// console.log("total", total); // 10
+
+//forEach 
+numbers.forEach ( (value) {
+  console.log("total", total);;
+  });
+
 
 // Challenge 2: Refactor the following code using .filter()
 
@@ -34,6 +40,17 @@ alphabets.forEach((alpha) => {
 });
 console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
 
+
+//.filter()
+
+const alphaB = alphabets.filter( (item) => {
+  return item === "b";
+  });
+  console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+  
+
+
+
 // Challenge 3: Refactor the following code using .map()
 const genderShortForm = ["m", "f", "m", "f"];
 let genderSpelledForm = [];
@@ -43,6 +60,11 @@ genderShortForm.forEach((x) => {
   if (x === "f") genderSpelledForm.push("Female");
 });
 console.log("genderSpelledForm", genderSpelledForm);
+
+const genderSpelledForm = genderShortForm.map(function (x)){
+  
+}
+
 
 // Challenge 4: Add 'currentSweetsInJug' into the reduce function so that
 // totalSweetsInJug would become 10
