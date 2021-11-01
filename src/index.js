@@ -1,20 +1,4 @@
-/*
-  In this lab session, students are required to convert an existing code 
-  to use the four array functions that we have covered. 
-  - .forEach()
-  - .filter()
-  - .map()
-  - .reduce()
 
-  Note: Refer to MDN or search the web to get help!
-
-  How to run JS file:
-
-  Option 1: If you are using VS Code, you can install "Code Runner" extension. So
-  that you are able to right click on this file and select "Run Code".
-
-  Option 2: If you have install Node, simply type 'node index.js' on the terminal.
-*/
 
 // Challenge 1: Refactor the following code using .forEach()
 
