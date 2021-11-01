@@ -31,12 +31,9 @@ console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
 
 // Challenge 3: Refactor the following code using .map()
 const genderShortForm = ["m", "f", "m", "f"];
-let genderSpelledForm = genderShortForm.map((genderLetter) => {
-  if (genderLetter === "m") {
-    return "Male";
-  }
-  return "Female";
-});
+let genderSpelledForm = genderShortForm.map((genderLetter) =>
+  genderLetter === "m" ? "Male" : "Female"
+);
 
 console.log("genderSpelledForm", genderSpelledForm);
 
