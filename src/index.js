@@ -23,7 +23,12 @@ let total = 0;
 for (let i = 0; i < numbers.length; i++) {
   total += numbers[i];
 }
-console.log("total", total); // 10
+console.log("total", total);
+
+numbers.forEach((value) => {
+  console.log(value + total);
+});
+// 10
 
 // Challenge 2: Refactor the following code using .filter()
 
@@ -32,7 +37,13 @@ const alphaB = [];
 alphabets.forEach((alpha) => {
   if (alpha === "b") alphaB.push(alpha);
 });
-console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+console.log("alphaB", alphaB);
+
+alphabets.filter((alpha) => {
+  if (alpha === "b") alphaB.push(alpha);
+});
+
+// [ 'b', 'b', 'b' ]
 
 // Challenge 3: Refactor the following code using .map()
 const genderShortForm = ["m", "f", "m", "f"];
@@ -44,6 +55,11 @@ genderShortForm.forEach((x) => {
 });
 console.log("genderSpelledForm", genderSpelledForm);
 
+genderShortForm.map((x) => {
+  if (x === "m") genderSpelledForm.push("Male");
+  if (x === "f") genderSpelledForm.push("Female");
+});
+
 // Challenge 4: Add 'currentSweetsInJug' into the reduce function so that
 // totalSweetsInJug would become 10
 
@@ -53,4 +69,14 @@ const putNewSweetsInJug = [1, 2, 3];
 const totalSweetsInJug = putNewSweetsInJug.reduce(
   (accumulator, currentValue) => accumulator + currentValue
 );
-console.log("totalSweetsInJug", totalSweetsInJug); // 6
+console.log("totalSweetsInJug", totalSweetsInJug);
+
+const totalSweetsInJug2 = putNewSweetsInJug.reduce(
+  (previousValue, currentValue) => {
+    return previousValue + currentValue;
+  }
+);
+
+console.log("totalSweetsInJug", totalSweetsInJug);
+
+// 6
