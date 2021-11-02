@@ -23,7 +23,12 @@ let total = 0;
 for (let i = 0; i < numbers.length; i++) {
   total += numbers[i];
 }
-console.log("total", total); // 10
+//console.log("total", total); // 10
+// Answer below
+numbers.forEach(function (number) {
+  console.log(number);
+});
+
 
 // Challenge 2: Refactor the following code using .filter()
 
@@ -32,7 +37,10 @@ const alphaB = [];
 alphabets.forEach((alpha) => {
   if (alpha === "b") alphaB.push(alpha);
 });
-console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+//console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+// Answer below
+const b = alphabets.filter((alphabet) => alphabet === 'b');
+console.log(b)
 
 // Challenge 3: Refactor the following code using .map()
 const genderShortForm = ["m", "f", "m", "f"];
@@ -51,6 +59,8 @@ const currentSweetsInJug = 4;
 const putNewSweetsInJug = [1, 2, 3];
 
 const totalSweetsInJug = putNewSweetsInJug.reduce(
-  (accumulator, currentValue) => accumulator + currentValue
+  (accumulator, currentValue) => accumulator + currentValue,
+  currentSweetsInJug //answer
 );
 console.log("totalSweetsInJug", totalSweetsInJug); // 6
+
