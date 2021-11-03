@@ -25,32 +25,56 @@ for (let i = 0; i < numbers.length; i++) {
 }
 console.log("total", total); // 10
 
+
 // Challenge 2: Refactor the following code using .filter()
 
+// const alphabets = ["a", "b", "a", "b", "b"];
+// const alphaB = [];
+// alphabets.forEach((alpha) => {
+//   if (alpha === "b") alphaB.push(alpha);
+// });
+// console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+
 const alphabets = ["a", "b", "a", "b", "b"];
-const alphaB = [];
-alphabets.forEach((alpha) => {
-  if (alpha === "b") alphaB.push(alpha);
-});
-console.log("alphaB", alphaB); // [ 'b', 'b', 'b' ]
+
+const filteredB = alphabets.filter((item) => item === "b");
+console.log(filteredB);
 
 // Challenge 3: Refactor the following code using .map()
-const genderShortForm = ["m", "f", "m", "f"];
-let genderSpelledForm = [];
+// const genderShortForm = ["m", "f", "m", "f"];
+// let genderSpelledForm = [];
 
-genderShortForm.forEach((x) => {
-  if (x === "m") genderSpelledForm.push("Male");
-  if (x === "f") genderSpelledForm.push("Female");
-});
-console.log("genderSpelledForm", genderSpelledForm);
+// genderShortForm.forEach((x) => {
+//   if (x === "m") genderSpelledForm.push("Male");
+//   if (x === "f") genderSpelledForm.push("Female");
+// });
+// console.log("genderSpelledForm", genderSpelledForm);
+
+const genderShortForm = ["m", "f", "m", "f"];
+      let genderMale = "male";
+      let genderFemale = "female";
+
+      let fullName = genderShortForm.map((item, index) => {
+        return index == [0][2] ? (item = genderMale) : (item = genderFemale);
+      });
+      console.log(fullName);
 
 // Challenge 4: Add 'currentSweetsInJug' into the reduce function so that
 // totalSweetsInJug would become 10
 
-const currentSweetsInJug = 4;
-const putNewSweetsInJug = [1, 2, 3];
+// const currentSweetsInJug = 4;
+// const putNewSweetsInJug = [1, 2, 3];
 
-const totalSweetsInJug = putNewSweetsInJug.reduce(
-  (accumulator, currentValue) => accumulator + currentValue
-);
-console.log("totalSweetsInJug", totalSweetsInJug); // 6
+// const totalSweetsInJug = putNewSweetsInJug.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue
+// );
+// console.log("totalSweetsInJug", totalSweetsInJug); // 6
+
+const currentSweetsInJug = 4;
+      const putNewSweetsInJug = [1, 2, 3];
+
+      let sum = putNewSweetsInJug.reduce(
+        (prevValue, curValue) => prevValue + curValue
+      );
+
+      console.log(sum);
