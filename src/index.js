@@ -25,8 +25,8 @@ for (let i = 0; i < numbers.length; i++) {
 }
 //console.log("total", total); // 10
 // Answer below
-numbers.forEach(function (number) {
-  console.log(number);
+numbers.forEach((number) => {
+  console.log(`foreach: ${number}`)
 });
 
 
@@ -51,7 +51,18 @@ genderShortForm.forEach((x) => {
   if (x === "f") genderSpelledForm.push("Female");
 });
 console.log("genderSpelledForm", genderSpelledForm);
+//Answer below
+const genderFullForm = genderShortForm.map(x => {
+  if (x === "m") genderSpelledForm.push("Male");
+  if (x === "f") genderSpelledForm.push("Female");
+});
+const genderFullForm = genderShortForm.map((x) => {
+  if (x === "m") genderSpelledForm.push("Male");
+  if (x === "f") genderSpelledForm.push("Female");
+  return genderSpelledForm;
+});
 
+console.log(genderSpelledForm);
 // Challenge 4: Add 'currentSweetsInJug' into the reduce function so that
 // totalSweetsInJug would become 10
 
